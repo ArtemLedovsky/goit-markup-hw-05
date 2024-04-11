@@ -30,7 +30,13 @@
             <li>
               <a href="./index.html" class="header-nav-link current">Studio</a>
             </li>
-            <li><a href="" class="header-nav-link">Portfolio</a></li>
+            <li>
+              <a
+                href="#portfolio-section-start"
+                class="header-nav-link portfolio-link"
+                >Portfolio</a
+              >
+            </li>
             <li><a href="" class="header-nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -52,7 +58,7 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
+        <div class="container hero-wrap">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-btn">Order Service</button>
         </div>
@@ -291,7 +297,7 @@
           </ul>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio-section-start">
         <div class="container">
           <h2 class="portfolio-title title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -430,7 +436,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="footer-right-cont">
+        <div class="footer-mid-cont">
           <p class="footer-soc-title">Social media</p>
           <ul class="footer-soc-list">
             <li class="footer-soc-item">
@@ -463,7 +469,103 @@
             </li>
           </ul>
         </div>
+        <div class="footer-right-cont">
+          <p class="footer-soc-title">Subscribe</p>
+          <div class="footer-input-wrap">
+            <label for="email-footer"></label>
+            <input
+              type="email"
+              name="subscribe-email"
+              id="email-footer"
+              class="input-footer"
+              placeholder="Email"
+            />
+
+            <button type="submit" class="footer-input-btn">
+              Subscribe
+              <svg class="footer-input-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+    <div class="backdrop visually-hidden">
+      <div class="modal">
+        <button type="button" class="modal-close-btn">
+          <svg width="8px" height="8px" class="modal-close-icon">
+            <use href="./images/icons.svg#icon-exit"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <label for="modal-user-name" class="modal-label">Name</label>
+          <div class="modal-input-wrap">
+            <input
+              type="text"
+              id="modal-user-name"
+              name="user-name"
+              class="modal-input"
+            />
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-user-name"></use>
+            </svg>
+          </div>
+          <label for="modal-user-tel" class="modal-label">Phone</label>
+          <div class="modal-input-wrap">
+            <input
+              type="tel"
+              id="modal-user-tel"
+              name="user-phone"
+              class="modal-input"
+            />
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label for="modal-user-email" class="modal-label">Email</label>
+          <div class="modal-input-wrap">
+            <input
+              type="email"
+              id="modal-user-email"
+              name="user-email"
+              class="modal-input"
+            />
+            <svg class="input-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <div class="modal-comment-wrap">
+            <label for="comment-area" class="modal-label">Comment</label>
+            <textarea
+              name="comment"
+              id="comment-area"
+              class="modal-textarea"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="license-wrap">
+            <div class="privacy-checkbox-wrap">
+              <input
+                type="checkbox"
+                id="license-agreement"
+                name="license-agree"
+                class="input-license"
+                required
+              />
+              <!-- <svg class="privacy-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-vector"></use>
+              </svg> -->
+            </div>
+            <label for="license-agreement" class="license-label"
+              >I accept the terms and conditions of the
+              <a class="privacy-link" href="">Privacy Policy</a></label
+            >
+          </div>
+          <button type="submit" class="modal-send-btn">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
