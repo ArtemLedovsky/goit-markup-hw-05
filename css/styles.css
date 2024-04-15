@@ -513,9 +513,6 @@ img {
   outline: none;
 }
 
-.footer-input-wrap {
-}
-
 .footer-email-form {
   display: flex;
   flex-direction: row;
@@ -524,6 +521,7 @@ img {
 }
 
 .footer-input-btn {
+  font-family: "Roboto", sans-serif;
   padding: 8px 24px;
   background-color: #4d5ae5;
   border: none;
@@ -533,10 +531,12 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-input-icon {
@@ -545,7 +545,6 @@ img {
 
 .footer-input-btn:hover,
 .footer-input-btn:focus {
-  cursor: pointer;
   background-color: #404bbf;
 }
 
