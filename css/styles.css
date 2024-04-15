@@ -511,6 +511,9 @@ img {
   padding: 8px 16px;
   color: #fff;
   outline: none;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
 }
 
 .footer-email-form {
@@ -521,6 +524,7 @@ img {
 }
 
 .footer-input-btn {
+  min-width: 165px;
   font-family: "Roboto", sans-serif;
   padding: 8px 24px;
   background-color: #4d5ae5;
@@ -533,7 +537,6 @@ img {
   text-align: center;
   color: #ffffff;
   display: flex;
-  gap: 16px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -541,6 +544,7 @@ img {
 }
 .footer-input-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 .footer-input-btn:hover,
@@ -562,6 +566,8 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -583,33 +589,43 @@ img {
   transform: translate(-50%, -50%);
   padding: 24px;
   padding-top: 72px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
   width: 24px;
   height: 24px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
+  cursor: pointer;
+  background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: #404bbf;
-  cursor: pointer;
+  border: none;
 }
 
 .modal-close-btn:hover .modal-close-icon {
-  fill: #fff;
+  fill: #ffffff;
+}
+
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff;
 }
 
 .modal-title {
