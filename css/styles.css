@@ -71,6 +71,12 @@ img {
   overflow: hidden;
 }
 
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
 /* -------------------------------------  */
 /* ------------------header------------------ */
 
@@ -551,6 +557,15 @@ img {
   z-index: 999;
   top: 0;
   left: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
@@ -683,26 +698,6 @@ img {
   border-color: #4d5ae5;
 }
 
-.license-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.input-license {
-  width: 16px;
-  height: 16px;
-}
-
-.license-label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
 .modal-send-btn {
   font-weight: 500;
   font-size: 16px;
@@ -718,8 +713,52 @@ img {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
   border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-send-btn:hover,
+.modal-send-btn:focus {
+  background-color: #404bbf;
+}
+
+.privacy-check {
+}
+
+.privacy-text {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.fake-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-privacy-check {
+}
+
+.privacy-check:checked + .privacy-text .fake-checkbox {
+  fill: #f4f4fd;
+  background-color: #404bbf;
 }
 
 .privacy-link {
+  margin-left: 4px;
   text-decoration: underline;
+  color: #4d5ae5;
 }

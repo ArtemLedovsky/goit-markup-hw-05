@@ -491,7 +491,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop visually-hidden">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg width="8px" height="8px" class="modal-close-icon">
@@ -545,22 +545,20 @@
               placeholder="Text input"
             ></textarea>
           </div>
-          <div class="license-wrap">
-            <div class="privacy-checkbox-wrap">
-              <input
-                type="checkbox"
-                id="license-agreement"
-                name="license-agree"
-                class="input-license"
-                required
-              />
-              <!-- <svg class="privacy-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-vector"></use>
-              </svg> -->
-            </div>
-            <label for="license-agreement" class="license-label"
+          <div class="privacy-wrap">
+            <input
+              type="checkbox"
+              name="privacy"
+              id="privacy"
+              value="yes"
+              class="privacy-check visually-hidden"
+            />
+            <label for="privacy" class="privacy-text"
+              ><span class="fake-checkbox"
+                ><svg class="icon-privacy-check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use></svg></span
               >I accept the terms and conditions of the
-              <a class="privacy-link" href="">Privacy Policy</a></label
+              <a href="" class="privacy-link">Privacy Policy</a></label
             >
           </div>
           <button type="submit" class="modal-send-btn">Send</button>
